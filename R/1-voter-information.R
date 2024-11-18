@@ -18,6 +18,7 @@ dt <- tibble::tibble(
   `Personal connections (other family, friends, people in your community)` = c(0.27, 0.26),
   `Religious leaders - your rav, rosh yeshiva/rebbeim, shul rabbi, etc.` = c(0.17, 0.05),
   `Yiddish-language Jewish newspapers, magazines` = c(0.1, 0.0001),
+  `Jewish radio programs` = c(0.07, 0.03),
   `Billboards, posters, Pashkevilin` = c(0.0001, 0.0001),
   `Other - Please describe` = c(0.05, 0.04)
 )
