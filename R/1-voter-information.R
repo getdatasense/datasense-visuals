@@ -40,7 +40,7 @@ dt_viz <- dt |>
       Source == "Religious leaders - your rav, rosh yeshiva/rebbeim, shul rabbi, etc." ~ "3",
       Source == "Social Media (WhatsApp, Facebook, Twitter, Instagram, etc.)" ~ "4",
       Source == "Non-Jewish newspapers, magazines" ~ "5",
-      Source == "Non-Jewish radio or TV" ~"5"
+      Source == "Non-Jewish radio or TV" ~"5",
       TRUE ~ "6"
     ),
     bold_text = color_arg %in% c("1", "2", "3"),
