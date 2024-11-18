@@ -1,5 +1,5 @@
 
-![](./utils/jif/banner.jpg)
+![](./utils/jpg/banner.jpg)
 
 Visuals by DataSense.
 
