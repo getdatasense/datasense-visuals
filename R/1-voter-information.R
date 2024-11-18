@@ -35,10 +35,13 @@ dt_viz <- dt |>
     color_arg = dplyr::case_when(
       Source == "English-language Jewish newspapers, magazines" ~ "1",
       Source == "Yiddish-language Jewish newspapers, magazines" ~ "1",
+      Source == "Jewish radio programs" ~ "1",
       Source == "Internet (unfiltered, unblocked)" ~ "2",
       Source == "Religious leaders - your rav, rosh yeshiva/rebbeim, shul rabbi, etc." ~ "3",
       Source == "Social Media (WhatsApp, Facebook, Twitter, Instagram, etc.)" ~ "4",
-      TRUE ~ "5"
+      Source == "Non-Jewish newspapers, magazines" ~ "5",
+      Source == "Non-Jewish radio or TV" ~"5"
+      TRUE ~ "6"
     ),
     bold_text = color_arg %in% c("1", "2", "3"),
     Source_wrapped = stringr::str_wrap(Source, width = 35)
@@ -96,7 +99,7 @@ ggplot(
   geom_vline(xintercept = 0, size = 0.5, color = "gray70", linetype = "dashed") +
   tidytext::scale_y_reordered() +
   facet_wrap(~ Group, scales = "free_y", ncol = 2, strip.position = "top") +
-  scale_fill_manual(values = c("#FFDD44", "#55AA88", "#44B5FF","#FF4081", "#C4C4C4")) +
+  scale_fill_manual(values = c("#FFDD44", "#55AA88", "#44B5FF","#FF4081", "#5E4FA2","#C4C4C4")) +
   labs(
     caption = "Source: Nishma Research (2023); Reproduced by DataSense (2024)",
     title = "Sources of Voting Information:",
